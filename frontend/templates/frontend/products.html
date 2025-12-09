@@ -1,0 +1,42 @@
+{% extends "frontend/base.html" %}
+{% block title %}Products | EthioCoffee{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h1>Our Premium Coffee Products</h1>
+    <p>Select from Ethiopia’s finest highland coffee beans.</p>
+</section>
+
+<section class="products-section container">
+    <div class="products-grid">
+
+        <div class="product-card">
+            <img src="/static/images/coffee1.jpg" alt="Yirgacheffe Coffee">
+            <h4>Yirgacheffe Coffee</h4>
+            <p class="price">350 ETB / 500g</p>
+            <button class="btn-primary add-to-cart" data-name="Yirgacheffe Coffee" data-price="350">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <img src="/static/images/coffee2.jpg" alt="Sidama Coffee">
+            <h4>Sidama Coffee</h4>
+            <p class="price">300 ETB / 500g</p>
+            <button class="btn-primary add-to-cart" data-name="Sidama Coffee" data-price="300">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="product-card">
+            <img src="/static/images/coffee3.jpg" alt="Guji Coffee">
+            <h4>Guji Coffee</h4>
+            <p class="price">400 ETB / 500g</p>
+            <button class="btn-primary add-to-cart" data-name="Guji Coffee" data-price="400">
+                Add to Cart
+            </button>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

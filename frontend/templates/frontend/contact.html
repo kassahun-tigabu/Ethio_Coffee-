@@ -1,0 +1,33 @@
+{% extends "frontend/base.html" %}
+{% block title %}Contact Us | EthioCoffee{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h1>Contact Us</h1>
+    <p>We are here to assist you. Feel free to reach out anytime.</p>
+</section>
+
+<section class="contact-container container">
+
+    <div class="contact-form-section">
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+    </div>
+
+    <div class="contact-info">
+        <h3>Office Address</h3>
+        <p>Bahir Dar, Ethiopia</p>
+
+        <h3>Email</h3>
+        <p>support@ethiocoffee.com</p>
+
+        <h3>Phone</h3>
+        <p>+251 900 000 000</p>
+    </div>
+
+</section>
+{% endblock %}

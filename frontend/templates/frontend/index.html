@@ -1,0 +1,63 @@
+{% extends "frontend/base.html" %}
+{% block title %}Home | EthioCoffee{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Premium Ethiopian Coffee</h2>
+        <p>Freshly sourced from Ethiopia’s top coffee regions — Yirgacheffe, Sidama, Guji, and more.</p>
+        <a href="{% url 'products' %}" class="btn-primary">Shop Now</a>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features container">
+    <div class="feature">
+        <h3>100% Organic</h3>
+        <p>Our beans are sourced from smallholder farmers using sustainable agricultural practices.</p>
+    </div>
+
+    <div class="feature">
+        <h3>Nationwide Delivery</h3>
+        <p>Fast and reliable delivery services to any region in Ethiopia.</p>
+    </div>
+
+    <div class="feature">
+        <h3>Trusted Quality</h3>
+        <p>Expert roasting delivers rich aroma, bold flavor, and consistent quality.</p>
+    </div>
+</section>
+
+<!-- POPULAR PRODUCTS -->
+<section class="products-section container">
+    <h2 class="section-title">Popular Products</h2>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <img src="/static/images/coffee5.jpg" alt="Yirgacheffe Coffee">
+            <h4>Yirgacheffe Coffee</h4>
+            <p class="price">350 ETB / 500g</p>
+            <button class="btn-primary">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="/static/images/coffee2.jpg" alt="Sidama Coffee">
+            <h4>Sidama Coffee</h4>
+            <p class="price">300 ETB / 500g</p>
+            <button class="btn-primary">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="/static/images/coffee3.jpg" alt="Guji Coffee">
+            <h4>Guji Coffee</h4>
+            <p class="price">400 ETB / 500g</p>
+            <button class="btn-primary">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
