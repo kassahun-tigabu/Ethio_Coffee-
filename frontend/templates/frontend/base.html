@@ -4,37 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ETHIO COFFEE{% endblock %}</title>
-
+    
     <!-- Static files -->
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
-    <!-- HEADER / NAVBAR -->
-    <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/products">Products</a>
-            <a href="/about">About</a>
-            <a href="/contact">Contact</a>
-            <a href="/cart">Cart</a>
-        </nav>
+    <!-- FIXED HEADER -->
+    <header class="header">
+        <div class="header-container">
+            <!-- Logo on left -->
+            <a href="/" class="logo">
+                <div class="logo-text">Ethio<span>Coffee</span></div>
+            </a>
+            
+            <!-- Mobile menu toggle -->
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <!-- Navigation on right -->
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-links">
+                    <li><a href="/" class="nav-link {% if request.path == '/' %}active{% endif %}">Home</a></li>
+                    <li><a href="/products" class="nav-link {% if request.path == '/products/' %}active{% endif %}">Products</a></li>
+                    <li><a href="/about" class="nav-link {% if request.path == '/about/' %}active{% endif %}">About</a></li>
+                    <li><a href="/contact" class="nav-link {% if request.path == '/contact/' %}active{% endif %}">Contact</a></li>
+                </ul>
+                
+                <!-- Cart Icon with Count -->
+                <div class="cart-icon">
+                    <a href="/cart" class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main>
+    <!-- MAIN CONTENT with padding for fixed header -->
+    <main class="main-content">
         {% block content %}
         {% endblock %}
     </main>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 ETHIO COFFEE. All rights reserved.</p>
+    <!-- FIXED FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Ethio<span>Coffee</span></div>
+                    <p class="footer-description">
+                        Premium Ethiopian coffee sourced directly from smallholder farmers. 
+                        Experience the authentic taste of Ethiopia's finest coffee regions.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/products">Products</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                        <li><a href="/cart">Shopping Cart</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Bahir Dar, Ethiopia</p>
+                    <p><i class="fas fa-phone"></i> +251 900 000 000</p>
+                    <p><i class="fas fa-envelope"></i> support@ethiocoffee.com</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2025 ETHIO COFFEE. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="{% static 'js/script.js' %}"></script>
-
+    {% block extra_js %}{% endblock %}
 </body>
 </html>

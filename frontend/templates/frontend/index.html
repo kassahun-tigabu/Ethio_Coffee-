@@ -2,62 +2,154 @@
 {% block title %}Home | EthioCoffee{% endblock %}
 
 {% block content %}
-
 <!-- HERO SECTION -->
 <section class="hero">
-    <div class="hero-content">
-        <h2>Premium Ethiopian Coffee</h2>
-        <p>Freshly sourced from Ethiopia’s top coffee regions — Yirgacheffe, Sidama, Guji, and more.</p>
-        <a href="{% url 'products' %}" class="btn-primary">Shop Now</a>
+    <div class="container">
+        <div class="hero-content animate-fadeInUp">
+            <h1>Experience the Authentic Taste of Ethiopia</h1>
+            <p>Freshly sourced from Ethiopia's iconic coffee regions — Yirgacheffe, Sidama, Guji, Harrar, and more.</p>
+            <a href="{% url 'products' %}" class="hero-btn">Shop Premium Coffee</a>
+        </div>
     </div>
 </section>
 
 <!-- FEATURES SECTION -->
-<section class="features container">
-    <div class="feature">
-        <h3>100% Organic</h3>
-        <p>Our beans are sourced from smallholder farmers using sustainable agricultural practices.</p>
-    </div>
-
-    <div class="feature">
-        <h3>Nationwide Delivery</h3>
-        <p>Fast and reliable delivery services to any region in Ethiopia.</p>
-    </div>
-
-    <div class="feature">
-        <h3>Trusted Quality</h3>
-        <p>Expert roasting delivers rich aroma, bold flavor, and consistent quality.</p>
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Choose EthioCoffee</h2>
+        <div class="features-grid">
+            <div class="feature-card animate-slideInLeft">
+                <div class="feature-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3 class="feature-title">100% Organic</h3>
+                <p>Our beans are sourced from smallholder farmers using sustainable agricultural practices.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h3 class="feature-title">Nationwide Delivery</h3>
+                <p>Fast and reliable delivery services to any region in Ethiopia.</p>
+            </div>
+            
+            <div class="feature-card animate-slideInLeft" style="animation-delay: 0.2s;">
+                <div class="feature-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="feature-title">Premium Quality</h3>
+                <p>Expert roasting delivers rich aroma, bold flavor, and consistent quality.</p>
+            </div>
+            
+            <div class="feature-card" style="animation-delay: 0.4s;">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="feature-title">Direct from Farmers</h3>
+                <p>We work directly with farmers ensuring fair prices and sustainable livelihoods.</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- POPULAR PRODUCTS -->
-<section class="products-section container">
-    <h2 class="section-title">Popular Products</h2>
-
-    <div class="products-grid">
-
-        <div class="product-card">
-            <img src="/static/images/coffee5.jpg" alt="Yirgacheffe Coffee">
-            <h4>Yirgacheffe Coffee</h4>
-            <p class="price">350 ETB / 500g</p>
-            <button class="btn-primary">Add to Cart</button>
+<!-- POPULAR PRODUCTS SECTION with HORIZONTAL SCROLL -->
+<section class="products-section">
+    <div class="container">
+        <h2 class="section-title">Popular Products</h2>
+        
+        <div class="products-scroll-container">
+            <button class="scroll-btn prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="scroll-wrapper" id="productsScroll">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="/static/images/coffee1.jpg" alt="Yirgacheffe Coffee" class="product-image">
+                        <div class="product-card__badge">Best Seller</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Yirgacheffe Coffee</h3>
+                        <p class="product-description">Floral, citrusy notes with a clean, bright finish. 500g pack.</p>
+                        <div class="product-price">350 <span>ETB</span></div>
+                        <button class="add-to-cart-btn" data-name="Yirgacheffe Coffee" data-price="350">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="/static/images/coffee2.jpg" alt="Sidama Coffee" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Sidama Coffee</h3>
+                        <p class="product-description">Wine-like acidity, berry notes, full body. 500g pack.</p>
+                        <div class="product-price">300 <span>ETB</span></div>
+                        <button class="add-to-cart-btn" data-name="Sidama Coffee" data-price="300">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="/static/images/coffee3.jpg" alt="Guji Coffee" class="product-image">
+                        <div class="product-card__badge">Premium</div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Guji Coffee</h3>
+                        <p class="product-description">Complex, fruity, with chocolate undertones. 500g pack.</p>
+                        <div class="product-price">400 <span>ETB</span></div>
+                        <button class="add-to-cart-btn" data-name="Guji Coffee" data-price="400">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="/static/images/coffee4.jpg" alt="Harrar Coffee" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Harrar Coffee</h3>
+                        <p class="product-description">Wild, winey, with blueberry notes. 500g pack.</p>
+                        <div class="product-price">380 <span>ETB</span></div>
+                        <button class="add-to-cart-btn" data-name="Harrar Coffee" data-price="380">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <div class="product-image-container">
+                        <img src="/static/images/coffee5.jpg" alt="Limu Coffee" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Limu Coffee</h3>
+                        <p class="product-description">Spicy, wine-like, balanced acidity. 500g pack.</p>
+                        <div class="product-price">320 <span>ETB</span></div>
+                        <button class="add-to-cart-btn" data-name="Limu Coffee" data-price="320">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="scroll-btn next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
-
-        <div class="product-card">
-            <img src="/static/images/coffee2.jpg" alt="Sidama Coffee">
-            <h4>Sidama Coffee</h4>
-            <p class="price">300 ETB / 500g</p>
-            <button class="btn-primary">Add to Cart</button>
+        
+        <div class="text-center" style="margin-top: 2rem;">
+            <a href="/products" class="btn btn--primary">View All Products</a>
         </div>
-
-        <div class="product-card">
-            <img src="/static/images/coffee3.jpg" alt="Guji Coffee">
-            <h4>Guji Coffee</h4>
-            <p class="price">400 ETB / 500g</p>
-            <button class="btn-primary">Add to Cart</button>
-        </div>
-
     </div>
 </section>
-
 {% endblock %}

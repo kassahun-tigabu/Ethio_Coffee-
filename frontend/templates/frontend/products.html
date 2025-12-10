@@ -3,40 +3,138 @@
 
 {% block content %}
 <section class="page-header">
-    <h1>Our Premium Coffee Products</h1>
-    <p>Select from Ethiopia’s finest highland coffee beans.</p>
+    <div class="container">
+        <h1>Our Coffee Collection</h1>
+        <p>Explore Ethiopia's finest and most authentic coffee varieties, sourced directly from legendary regions.</p>
+    </div>
 </section>
 
-<section class="products-section container">
-    <div class="products-grid">
-
-        <div class="product-card">
-            <img src="/static/images/coffee1.jpg" alt="Yirgacheffe Coffee">
-            <h4>Yirgacheffe Coffee</h4>
-            <p class="price">350 ETB / 500g</p>
-            <button class="btn-primary add-to-cart" data-name="Yirgacheffe Coffee" data-price="350">
-                Add to Cart
-            </button>
+<section class="products-section">
+    <div class="container">
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/static/images/coffee1.jpg" alt="Yirgacheffe Coffee" class="product-image">
+                    <div class="product-card__badge">Best Seller</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Yirgacheffe Coffee</h3>
+                    <p class="product-description">Floral, citrusy notes with a clean, bright finish. 500g pack.</p>
+                    <div class="product-price">350 <span>ETB</span></div>
+                    <button class="add-to-cart-btn" data-name="Yirgacheffe Coffee" data-price="350">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/static/images/coffee2.jpg" alt="Sidama Coffee" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sidama Coffee</h3>
+                    <p class="product-description">Wine-like acidity, berry notes, full body. 500g pack.</p>
+                    <div class="product-price">300 <span>ETB</span></div>
+                    <button class="add-to-cart-btn" data-name="Sidama Coffee" data-price="300">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/static/images/coffee3.jpg" alt="Guji Coffee" class="product-image">
+                    <div class="product-card__badge">Premium</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Guji Coffee</h3>
+                    <p class="product-description">Complex, fruity, with chocolate undertones. 500g pack.</p>
+                    <div class="product-price">400 <span>ETB</span></div>
+                    <button class="add-to-cart-btn" data-name="Guji Coffee" data-price="400">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/static/images/coffee4.jpg" alt="Harrar Coffee" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Harrar Coffee</h3>
+                    <p class="product-description">Wild, winey, with blueberry notes. 500g pack.</p>
+                    <div class="product-price">380 <span>ETB</span></div>
+                    <button class="add-to-cart-btn" data-name="Harrar Coffee" data-price="380">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/static/images/coffee5.jpg" alt="Limu Coffee" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Limu Coffee</h3>
+                    <p class="product-description">Spicy, wine-like, balanced acidity. 500g pack.</p>
+                    <div class="product-price">320 <span>ETB</span></div>
+                    <button class="add-to-cart-btn" data-name="Limu Coffee" data-price="320">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/static/images/coffee6.jpg" alt="Kaffa Forest Coffee" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Kaffa Forest Coffee</h3>
+                    <p class="product-description">Forest-grown, wild, with earthy tones. 500g pack.</p>
+                    <div class="product-price">360 <span>ETB</span></div>
+                    <button class="add-to-cart-btn" data-name="Kaffa Forest Coffee" data-price="360">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/static/images/coffee7.jpg" alt="Jimma Coffee" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Jimma Coffee</h3>
+                    <p class="product-description">Fruity, floral, with balanced body. 500g pack.</p>
+                    <div class="product-price">290 <span>ETB</span></div>
+                    <button class="add-to-cart-btn" data-name="Jimma Coffee" data-price="290">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image-container">
+                    <img src="/static/images/coffee8.jpg" alt="Special Blend" class="product-image">
+                    <div class="product-card__badge">New</div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Special Blend</h3>
+                    <p class="product-description">Master roaster's special blend of premium beans. 500g pack.</p>
+                    <div class="product-price">420 <span>ETB</span></div>
+                    <button class="add-to-cart-btn" data-name="Special Blend" data-price="420">
+                        <i class="fas fa-cart-plus"></i> Add to Cart
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <div class="product-card">
-            <img src="/static/images/coffee2.jpg" alt="Sidama Coffee">
-            <h4>Sidama Coffee</h4>
-            <p class="price">300 ETB / 500g</p>
-            <button class="btn-primary add-to-cart" data-name="Sidama Coffee" data-price="300">
-                Add to Cart
-            </button>
-        </div>
-
-        <div class="product-card">
-            <img src="/static/images/coffee3.jpg" alt="Guji Coffee">
-            <h4>Guji Coffee</h4>
-            <p class="price">400 ETB / 500g</p>
-            <button class="btn-primary add-to-cart" data-name="Guji Coffee" data-price="400">
-                Add to Cart
-            </button>
-        </div>
-
     </div>
 </section>
 {% endblock %}

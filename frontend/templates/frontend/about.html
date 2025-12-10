@@ -2,39 +2,59 @@
 {% block title %}About Us | EthioCoffee{% endblock %}
 
 {% block content %}
-<section class="page-header">
-    <h1>About EthioCoffee</h1>
-    <p>Your trusted source for premium Ethiopian coffee.</p>
+<section class="about-hero">
+    <div class="container">
+        <h1 class="animate-fadeInUp">About EthioCoffee</h1>
+        <p class="animate-fadeInUp" style="animation-delay: 0.2s;">Preserving the heritage of Ethiopian coffee, one bean at a time.</p>
+    </div>
 </section>
 
-<section class="about-section container">
+<section class="about-content">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>Who We Are</h2>
+                <p>
+                    EthioCoffee is an Ethiopian coffee marketplace dedicated to delivering premium,
+                    authentic, and ethically sourced coffee beans from Ethiopia's most iconic regions—
+                    Yirgacheffe, Sidama, Guji, Harrar, Limu, and more.
+                </p>
+                <p>
+                    We work directly with smallholder farmers to ensure quality, fair trade, and sustainable
+                    production that benefits local communities.
+                </p>
 
-    <div class="about-card">
-        <h2>Who We Are</h2>
-        <p>
-            EthioCoffee is committed to delivering the highest-quality Ethiopian coffee
-            sourced directly from smallholder farmers in Yirgacheffe, Sidama, Guji,
-            and other renowned regions.
-        </p>
+                <h2>Our Mission</h2>
+                <p>
+                    To connect Ethiopia's finest coffee producers with customers across the world,
+                    ensuring authenticity, freshness, and fair pricing.
+                </p>
+
+                <h2>Our Values</h2>
+                <ul class="about-list">
+                    <li><i class="fas fa-check-circle"></i> 100% Organic and ethically sourced</li>
+                    <li><i class="fas fa-check-circle"></i> Direct partnership with local farmers</li>
+                    <li><i class="fas fa-check-circle"></i> Expert roasting and professional packaging</li>
+                    <li><i class="fas fa-check-circle"></i> Nationwide delivery across Ethiopia</li>
+                    <li><i class="fas fa-check-circle"></i> Sustainable farming practices</li>
+                    <li><i class="fas fa-check-circle"></i> Community development support</li>
+                </ul>
+            </div>
+
+            <div class="about-image">
+                <img src="/static/images/about_coffee.jpg" alt="Ethiopian Coffee Farmers" class="animate-slideInLeft">
+            </div>
+        </div>
+        
+        <div class="story-section" style="margin-top: 4rem;">
+            <h2 class="text-center">Our Story</h2>
+            <p class="text-center" style="max-width: 800px; margin: 1rem auto;">
+                Founded in 2020 by a group of coffee enthusiasts and agricultural experts, 
+                EthioCoffee began with a simple mission: to bring Ethiopia's world-renowned 
+                coffee directly to consumers while ensuring farmers receive fair compensation 
+                for their hard work and expertise.
+            </p>
+        </div>
     </div>
-
-    <div class="about-card">
-        <h2>Our Mission</h2>
-        <p>
-            To support Ethiopian farmers through fair trade practices while providing
-            customers with rich, authentic, and organic coffee products.
-        </p>
-    </div>
-
-    <div class="about-card">
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li>100% organic coffee beans</li>
-            <li>Expert roasting quality</li>
-            <li>Fast and reliable nationwide delivery</li>
-            <li>Trusted by thousands of coffee lovers</li>
-        </ul>
-    </div>
-
 </section>
 {% endblock %}

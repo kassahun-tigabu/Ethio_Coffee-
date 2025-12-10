@@ -3,31 +3,103 @@
 
 {% block content %}
 <section class="page-header">
-    <h1>Contact Us</h1>
-    <p>We are here to assist you. Feel free to reach out anytime.</p>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We are here to assist you. Feel free to reach out anytime.</p>
+    </div>
 </section>
 
-<section class="contact-container container">
-
-    <div class="contact-form-section">
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn-primary">Send Message</button>
-        </form>
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-container">
+            <!-- Contact Info Side -->
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Office Address</h4>
+                            <p>Bahir Dar, Ethiopia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Email Address</h4>
+                            <p>support@ethiocoffee.com</p>
+                            <p>orders@ethiocoffee.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Phone Number</h4>
+                            <p>+251 900 000 000</p>
+                            <p>+251 911 111 111</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
+                            <p>Saturday: 9:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Contact Form Side -->
+            <div class="contact-form-container">
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder=" " required>
+                            <label for="name" class="form-label">Your Name</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" class="form-control" id="email" placeholder=" " required>
+                            <label for="email" class="form-label">Email Address</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="subject" placeholder=" ">
+                            <label for="subject" class="form-label">Subject (Optional)</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea class="form-control" id="message" rows="4" placeholder=" " required></textarea>
+                            <label for="message" class="form-label">Your Message</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="contact-info">
-        <h3>Office Address</h3>
-        <p>Bahir Dar, Ethiopia</p>
-
-        <h3>Email</h3>
-        <p>support@ethiocoffee.com</p>
-
-        <h3>Phone</h3>
-        <p>+251 900 000 000</p>
-    </div>
-
 </section>
 {% endblock %}

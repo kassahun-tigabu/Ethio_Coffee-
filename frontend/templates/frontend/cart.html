@@ -1,33 +1,110 @@
 {% extends "frontend/base.html" %}
-{% block title %}Cart | EthioCoffee{% endblock %}
+{% block title %}Your Cart | EthioCoffee{% endblock %}
 
 {% block content %}
-<section class="page-header">
-    <h1>Your Shopping Cart</h1>
-    <p>Review your selected coffee products.</p>
-</section>
-
-<section class="cart-section container">
-
-    <table class="cart-table">
-        <thead>
-            <tr>
-                <th>Product</th>
-                <th>Price (ETB)</th>
-                <th>Quantity</th>
-                <th>Total (ETB)</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody id="cart-items">
-            <!-- JavaScript will populate this -->
-        </tbody>
-    </table>
-
-    <div class="cart-summary">
-        <h3>Grand Total: <span id="cart-total">0</span> ETB</h3>
-        <button class="btn-primary" id="checkout-btn">Proceed to Checkout</button>
+<section class="cart-section">
+    <div class="container">
+        <div class="page-header" style="margin-bottom: 2rem;">
+            <h1>Your Shopping Cart</h1>
+            <p>Review your items and proceed to checkout.</p>
+        </div>
+        
+        <div class="cart-container">
+            {% if cart_items %}
+            <div class="cart-table-wrapper">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price (ETB)</th>
+                            <th>Quantity</th>
+                            <th>Total (ETB)</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody id="cart-body">
+                        <!-- Cart items will be loaded here by JavaScript -->
+                        <!-- Example row structure:
+                        <tr>
+                            <td data-label="Product">
+                                <div class="product-cell">
+                                    <img src="/static/images/coffee1.jpg" alt="Yirgacheffe Coffee" class="product-img">
+                                    <div>
+                                        <div class="product-name">Yirgacheffe Coffee</div>
+                                        <div class="product-category">Premium Arabica</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td data-label="Price" class="price-cell">350 ETB</td>
+                            <td data-label="Quantity">
+                                <div class="quantity-controls">
+                                    <button class="quantity-btn minus">-</button>
+                                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                                    <button class="quantity-btn plus">+</button>
+                                </div>
+                            </td>
+                            <td data-label="Total" class="total-cell">350 ETB</td>
+                            <td data-label="Remove">
+                                <button class="remove-btn">
+                                    <i class="fas fa-trash"></i> Remove
+                                </button>
+                            </td>
+                        </tr>
+                        -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">0 ETB</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">50 ETB</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span id="tax">0 ETB</span>
+                </div>
+                <div class="summary-row summary-total">
+                    <span>Total</span>
+                    <span id="cart-total">0 ETB</span>
+                </div>
+                
+                <button class="checkout-btn">
+                    <i class="fas fa-lock"></i> Proceed to Secure Checkout
+                </button>
+                
+                <div class="cart-actions" style="margin-top: 1rem; text-align: center;">
+                    <a href="/products" class="btn btn--outline" style="margin-right: 1rem;">
+                        <i class="fas fa-arrow-left"></i> Continue Shopping
+                    </a>
+                    <button class="btn btn--secondary" id="clearCart">
+                        <i class="fas fa-trash"></i> Clear Cart
+                    </button>
+                </div>
+            </div>
+            {% else %}
+            <div class="empty-cart">
+                <div class="empty-cart-icon">
+                    <i class="fas fa-shopping-cart fa-4x"></i>
+                </div>
+                <h2>Your cart is empty</h2>
+                <p>Looks like you haven't added any coffee to your cart yet.</p>
+                <a href="/products" class="btn btn--primary" style="margin-top: 1.5rem;">
+                    <i class="fas fa-coffee"></i> Browse Products
+                </a>
+            </div>
+            {% endif %}
+        </div>
     </div>
-
 </section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/cart.js"></script>
 {% endblock %}
